@@ -2,8 +2,10 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import "./App.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import PageApp from "./components/PageApp";
-// import RecipeApp from "./components/RecipeApp";
+import AllRoutes from "./components/AllRoutes";
+import ProfileContextProvider from "./profileContext/profileContext";
+import { useState } from "react";
+
 
 function App() {
   let clientId =
@@ -11,10 +13,11 @@ function App() {
   return (
     <div className="App">
       <GoogleOAuthProvider clientId={clientId}>
-        <Navbar />
-        {/* <RecipeApp /> */}
-        <PageApp />
-        <Footer />
+        <ProfileContextProvider>
+          <Navbar />
+          <AllRoutes />
+          <Footer />
+        </ProfileContextProvider>
       </GoogleOAuthProvider>
     </div>
   );
