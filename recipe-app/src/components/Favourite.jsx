@@ -14,24 +14,13 @@ const Order = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/users/SingleUserData?email=${data2?.email}`)
+      .get(`https://recipe-backend-3.vercel.app/users/SingleUserData?email=${data2?.email}`)
       .then((res) => {
-        // console.log(res.data[0].allRecipe);
+
     
        res.data.length >0 && setData(res.data[0].allRecipe);
 
       });
-
-    // axios
-    //   .get(`http://localhost:8080/users/SingleUserData?email=${data2?.email}`)
-    //   .then((res) => {
-    //     if (res.data && res.data.length > 0 && res.data[0].allRecipe) {
-    //       setData(res.data[0].allRecipe);
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error fetching user data:", error);
-    //   });
 
   }, []);
 

@@ -16,8 +16,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import DishCard from "./DishCard";
-import ImageSlider from "./ImageSliderApp/ImageSlider";
-
+import ImageSlider from './ImageSlider/ImageSlider'
 const apiKey = process.env.REACT_APP_ApiKey;
 let limit = 6;
 
@@ -129,7 +128,7 @@ const RecipeApp = (query) => {
                 ? "repeat(2, 1fr)"
                 : isLargeScreen
                 ? "repeat(3, 1fr)"
-                : "repeat(2, 1fr)", // 3 cards per row on large screens
+                : "repeat(2, 1fr)",
             ]}
             gap={4}
             justifyContent="center"

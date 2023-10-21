@@ -24,7 +24,7 @@ const DishCard = ({ item }) => {
       console.log(FaviouriteData);
       try {
         axios
-          .post("http://localhost:8080/favourite/add", FaviouriteData)
+          .post("https://recipe-backend-3.vercel.app/favourite/add", FaviouriteData)
           .then((res) => {
             console.log(res.data);
             toast({

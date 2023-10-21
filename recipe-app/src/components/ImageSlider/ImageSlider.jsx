@@ -15,7 +15,7 @@ import img1 from "../../assets/food.jpg";
 import img3 from "../../assets/food2.jpg";
 import img6 from "../../assets/food3.jpg";
 import img8 from "../../assets/food4.jpg";
-import "../ImageSliderApp/styles.css";
+import "./styles.css";
 
 const ImageSlider2 = () => {
   return (

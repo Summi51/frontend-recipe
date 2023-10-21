@@ -37,7 +37,7 @@ const Navbar = () => {
   const loginSuccess = (res) => {
     const decode = jwt_decode(res.credential);
     localStorage.setItem("oath", JSON.stringify(decode));
-    axios.post(`http://localhost:8080/users`, decode).then((res) => {
+    axios.post(`https://recipe-backend-3.vercel.app/users`, decode).then((res) => {
       navigate("/");
       setLoginCredentials(decode);
       onClose();

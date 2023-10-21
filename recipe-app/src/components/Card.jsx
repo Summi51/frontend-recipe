@@ -1,14 +1,24 @@
-import { Box, Flex, Heading, IconButton, Image, Text, useToast } from "@chakra-ui/react";
+import { DeleteIcon } from "@chakra-ui/icons";
+import {
+  Box,
+  Flex,
+  Heading,
+  IconButton,
+  Image,
+  Text,
+  useToast,
+} from "@chakra-ui/react";
 import axios from "axios";
-import {  DeleteIcon } from "@chakra-ui/icons";
 const Card = ({ item, handledelete }) => {
   const toast = useToast();
 
   const handleDelete = () => {
     axios
-      .delete(`http://localhost:8080/favourite/delete/${item._id}`)
+      .delete(
+        `https://recipe-backend-3.vercel.app/favourite/delete/${item._id}`
+      )
       .then((res) => {
-        handledelete(item); 
+        handledelete(item);
         toast({
           title: "Success",
           description: "Dish Removed",
@@ -32,24 +42,57 @@ const Card = ({ item, handledelete }) => {
   };
 
   return (
-       <Box>
-      <Flex m={3} p={6} borderBottom="1px solid gray" alignItems="center" justifyContent="space-around" >
-        <Box margin="auto" w={{ base: "30%", md: "15%" }} display="flex" gap={10}>
-          <Image borderRadius="5%" src={item.image} w="100px" h="100px" objectFit="cover" />
+    <Box>
+      <Flex
+        m={3}
+        p={6}
+        borderBottom="1px solid gray"
+        alignItems="center"
+        justifyContent="space-around"
+      >
+        <Box
+          margin="auto"
+          w={{ base: "30%", md: "15%" }}
+          display="flex"
+          gap={10}
+        >
+          <Image
+            borderRadius="5%"
+            src={item.image}
+            w="100px"
+            h="100px"
+            objectFit="cover"
+          />
         </Box>
         <Box margin="auto" w={{ base: "30%", md: "15%" }} gap={10}>
-          <Heading as="h2" size="md" fontSize={{ base: "1rem", md: "1vw" }} mb="0.5rem">
+          <Heading
+            as="h2"
+            size="md"
+            fontSize={{ base: "1rem", md: "1vw" }}
+            mb="0.5rem"
+          >
             {item.title}
           </Heading>
         </Box>
-        <Text textAlign="center" w={{ base: "30%", md: "15%" }} fontSize="1rem" fontWeight="700" mb="0.5rem" gap={10}>
+        <Text
+          textAlign="center"
+          w={{ base: "30%", md: "15%" }}
+          fontSize="1rem"
+          fontWeight="700"
+          mb="0.5rem"
+          gap={10}
+        >
           {item.userEmail}
         </Text>
         {/* <Text w={{ base: "30%", md: "15%" }} fontSize="1rem" fontWeight="700" mb="0.5rem" gap={10}>
           {item.imageType}
         </Text> */}
 
-        <Flex w={{ base: "30%", md: "15%" }} margin="auto" justifyContent={{ base: "center", md: "flex-end" }}>
+        <Flex
+          w={{ base: "30%", md: "15%" }}
+          margin="auto"
+          justifyContent={{ base: "center", md: "flex-end" }}
+        >
           <IconButton
             colorScheme="red"
             aria-label="Delete"

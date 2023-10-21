@@ -13,6 +13,7 @@ UserRouter.get(`/`, async (req, res) => {
     }
 })
 
+
 //For Single User 
 UserRouter.get('/SingleUserData', async(req, res) => {
     try {
