@@ -1,6 +1,7 @@
 # Recipe Delights
 
-![Recipe Delights Logo](![logo](https://github.com/Summi51/frontend-recipe/assets/73363392/21ad1104-792b-424b-a58a-834142bb58c2))
+![logo](https://github.com/Summi51/frontend-recipe/assets/73363392/71871308-faa2-4b72-a537-3e8ec993344c)
+
 
 Recipe Delights is an interactive full-stack recipe application that allows users to search for their favorite recipes, view detailed recipe information, and save their preferred recipes. This project demonstrates the use of Node.js, Express.js, and React.js to create a responsive and feature-rich recipe application.
 
