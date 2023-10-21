@@ -17,7 +17,11 @@ import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import DishCard from "./DishCard";
 import ImageSlider from './ImageSlider/ImageSlider'
-const apiKey = process.env.REACT_APP_ApiKey;
+
+const apiKey = "f11cdf8a414b433e8a6ebf2c819bff15"
+
+// const apiKey = process.env.REACT_APP_ApiKey;
+
 let limit = 6;
 
 const RecipeApp = (query) => {
