@@ -50,7 +50,7 @@ To get started with Recipe Delights, follow the steps below:
 
 ## Backend Deploy - https://recipe-backend-3.vercel.app/
 
-## Frontend Deploy - 
+## Frontend Deploy - https://frontend-recipe-iota.vercel.app/
 
 # Project Layout 
 
