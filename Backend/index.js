@@ -11,11 +11,12 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  console.log("Hello World");
+  // console.log("Hello World");
+  res.send("Hello World");
 });
 
 app.use("/users", UserRouter);
-app.use('/favourite',FavouriteRouter)
+app.use("/favourite", FavouriteRouter);
 
 app.listen(process.env.PORT, async () => {
   try {
